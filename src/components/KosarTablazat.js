@@ -3,6 +3,10 @@ import Sor from "./KosarSor"
 
 export default function Tablazat(props){
 
+    function torles(adat){
+        props.torles(adat)
+    }
+
     return(
         <>
         <table className='table table-striped table-bordered'>
@@ -17,7 +21,7 @@ export default function Tablazat(props){
         </thead>
         <tbody>
             {props.lista.map((elem, index)=>{
-                return <Sor obj={elem} key={index}/>
+                return <Sor obj={elem} key={index} torles={torles}/>
             })}
         </tbody>
         </table>

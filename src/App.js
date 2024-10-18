@@ -14,6 +14,11 @@ function App() {
     setKosarLista(kosarbaLista)
   }
 
+  function torles(adat){
+    const ujKosarLista = kosarLista.filter(termek => termek !== adat);
+    setKosarLista(ujKosarLista);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,7 +30,7 @@ function App() {
         </article>
         <aside className='col-md-6'>
           <h2>Kosár tartalma</h2>
-          <KosarTablazat lista={kosarLista} kattintas={() => {}}/>
+          <KosarTablazat lista={kosarLista} kattintas={kattintas} torles={torles}/>
         </aside>
         <footer><p>Horváth Nauzika</p></footer>
       </body>
