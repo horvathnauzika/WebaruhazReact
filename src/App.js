@@ -9,9 +9,24 @@ function App() {
   const [kosarLista, setKosarLista] = useState([]);
 
   function kattintas(adat){
-    console.log(adat)
-    const kosarbaLista=[...kosarLista, adat];
+    let tobbszor = false
+
+    kosarLista.forEach(elem=>{
+      if(elem.cim == adat.cim){
+        tobbszor = true;
+        elem.db++;
+      }
+    })
+    if(tobbszor){
+    const kosarbaLista=[...kosarLista];
     setKosarLista(kosarbaLista)
+    }
+    else{
+      adat['db']=1;
+      const kosarbaLista=[...kosarLista, adat];
+      setKosarLista(kosarbaLista)
+    }
+  
   }
 
   function torles(adat){
