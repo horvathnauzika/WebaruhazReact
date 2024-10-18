@@ -11,6 +11,7 @@ export default function Tablazat(props){
                 <th>Cím</th>
                 <th>Kép</th>
                 <th>Ár</th>
+                <th>Darabszám</th>
                 <th>Törlés</th>
             </tr>
         </thead>

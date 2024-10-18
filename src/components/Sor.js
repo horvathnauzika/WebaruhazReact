@@ -6,6 +6,7 @@ export default function Sor(props){
         props.kattintas(props.obj)
     }
 
+
     return(
         <tr>
             <td>{props.obj.cim}</td>
